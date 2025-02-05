@@ -32,7 +32,7 @@ function getJadwalSholat() {
 		const jadwal = data.jadwal.data;
 		document.querySelector('.subuh').textContent = jadwal.subuh;
 		document.querySelector('.dzuhur').textContent = jadwal.dzuhur;
-		document.querySelector('.ashar').textContent = jadwal.ashar;
+		document.getElementById('ashar').textContent = jadwal.ashar;
 		document.querySelector('.maghrib').textContent = jadwal.maghrib;
 		document.querySelector('.isya').textContent = jadwal.isya;
 		document.querySelector('.tanggal').textContent = jadwal.tanggal;
