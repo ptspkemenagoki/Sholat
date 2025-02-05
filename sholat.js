@@ -25,11 +25,11 @@ function hari(){
 const tanggal = `${getYear}-${bulan()}-${hari()}`;
 
 
-function getJadwalSholat() {
+function getJadwalShalat() {
 	fetch('https://api.myquran.com/v2/sholat/jadwal/0809/' + tanggal)
 	.then(response => response.json())
 	.then(data => {
-		const jadwal = data.jadwal.data;
+		const jadwal = data.data.jadwal
 		document.querySelector('.subuh').textContent = jadwal.subuh;
 		document.querySelector('.dzuhur').textContent = jadwal.dzuhur;
 		document.getElementById('ashar').textContent = jadwal.ashar;
