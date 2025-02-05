@@ -26,7 +26,7 @@ const tanggal = `${getYear}-${bulan()}-${hari()}`;
 
 
 function getJadwalSholat() {
-	fetch('https://api.myquran.com/v2/sholat/format/json/jadwal/kota/0809/tanggal/' + tanggal)
+	fetch('https://api.myquran.com/v2/sholat/jadwal/0809/' + tanggal)
 	.then(response => response.json())
 	.then(data => {
 		const jadwal = data.jadwal.data;
