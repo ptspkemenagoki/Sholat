@@ -1,4 +1,3 @@
-// ambil tanggal
 const getDate = new Date();
 const getYear = getDate.getFullYear();
 const getMont = getDate.getMonth() + 1;
@@ -13,7 +12,6 @@ function bulan(){
 	return bulan
 }
 
-// ambil hari
 function hari(){
 	if (getDay < 10){
 		hari = `0${getDay}`;
@@ -30,7 +28,6 @@ function getJadwalSholat() {
 	.then(res => res.json())
 	.then ( data => {
 		const jadwal = data.data.jadwal
-		// console.log(jadwal)
 		document.getElementById('subuh').textContent = jadwal.subuh
 		document.getElementById('dzuhur').textContent = jadwal.dzuhur
 		document.getElementById('ashar').textContent = jadwal.ashar
